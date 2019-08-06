@@ -1,0 +1,20 @@
+{
+  "name": "webpack-learn",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Maksim Kokuysky <m.kokuysky@corp.101xp.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/guitarlomaster/webpack-4-layout",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "neat": "1.8.0"
+  }
+}

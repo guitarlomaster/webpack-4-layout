@@ -4,12 +4,12 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     mode: 'production',
     entry: [
-        './src/js/main.js',
-        './src/style/style.scss'
+        './src/scripts/main.scripts',
+        './src/style/app.scss'
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: './assets/js/main.bundle.min.js',
+        filename: './assets/scripts/main.bundle.min.scripts',
         publicPath: ''
     },
     module: {

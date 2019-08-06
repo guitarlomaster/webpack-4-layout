@@ -1,4 +1,6 @@
-import {User} from './User';
+import '../style/app.scss'
+
+import {User} from './app/User';
 
 var obj = {
     name: 'Max',
