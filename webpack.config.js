@@ -5,7 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
     mode: 'development',
     entry: [
-        './src/js/main.js',
+        './src/scripts/index.ts',
         './src/style/style.scss'
     ],
     output: {
@@ -13,21 +13,25 @@ module.exports = {
         filename: './assets/js/main.bundle.js',
         publicPath: ''
     },
+    resolve: {
+        extensions: [".tsx", ".ts", ".js"]
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
+                use: [
+                    {
+                        loader: 'ts-loader'
+                    }
+                ]
             },
             {
                 test: /\.html$/,
                 use: [
                     {
-                        loader: 'html-loader',
-                        //options: { minimize: true }
+                        loader: 'html-loader'
                     }
                 ]
             },
