@@ -15,6 +15,7 @@
     "tests"
   ],
   "devDependencies": {
-    "neat": "1.8.0"
+    "neat": "1.8.0",
+    "bourbon": "4.2.7"
   }
 }

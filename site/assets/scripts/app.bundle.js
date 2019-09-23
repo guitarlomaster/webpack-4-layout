@@ -127,19 +127,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/app.scss */ \"./src/style/app.scss\");\n/* harmony import */ var _style_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_User__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app/User */ \"./src/scripts/app/User.js\");\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(source, true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(source).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n\n\nvar obj = {\n  name: 'Max',\n  age: 25\n};\n\nvar copyObj = function copyObj(object) {\n  return _objectSpread({}, object);\n};\n\nvar copiedObj = copyObj(obj);\nconsole.log(copiedObj);\nconsole.log(213);\nconsole.log(1111);\nvar user = new _app_User__WEBPACK_IMPORTED_MODULE_1__[\"User\"]('Max', 25);\nconsole.log(user.getUser());\n\n//# sourceURL=webpack:///./src/scripts/app.js?");
-
-/***/ }),
-
-/***/ "./src/scripts/app/User.js":
-/*!*********************************!*\
-  !*** ./src/scripts/app/User.js ***!
-  \*********************************/
-/*! exports provided: User */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"User\", function() { return User; });\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar User =\n/*#__PURE__*/\nfunction () {\n  function User(name, age) {\n    _classCallCheck(this, User);\n\n    this.name = name;\n    this.age = age;\n  }\n\n  _createClass(User, [{\n    key: \"getUser\",\n    value: function getUser() {\n      return \"Name: \".concat(this.name, \", Age: \").concat(this.age);\n    }\n  }]);\n\n  return User;\n}(); //export default User;\n\n//# sourceURL=webpack:///./src/scripts/app/User.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_app_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../style/app.scss */ \"./src/style/app.scss\");\n/* harmony import */ var _style_app_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_app_scss__WEBPACK_IMPORTED_MODULE_0__);\n\n\n//# sourceURL=webpack:///./src/scripts/app.js?");
 
 /***/ }),
 

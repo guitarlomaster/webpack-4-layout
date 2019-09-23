@@ -6,6 +6,10 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
+button {
+  background-color: white;
+  border: none; }
+
 h1 {
   color: red; }
 

@@ -1,11 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const {UnusedFilesWebpackPlugin} = require('unused-files-webpack-plugin');
+const { DuplicatesPlugin } = require('inspectpack/plugin');
+const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
     mode: 'development',
     entry: {
-        'app': './src/scripts/app.js',
-        'app_site': './src/scripts/app_site.js'
+        'app': './src/scripts/app.js'
+        //'app_site': './src/scripts/app_site.js'
     },
     output: {
         path: path.resolve(__dirname, '../site/assets'),
@@ -29,7 +32,8 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: true,
+                            url: false
                         }
                     },
                     {
@@ -53,6 +57,17 @@ module.exports = {
     plugins: [
         new MiniCssExtractPlugin({
             filename: './css/[name].bundle.css'
-        })
+        }),
+        new UnusedFilesWebpackPlugin({
+            globOptions: {
+                ignore: [
+                    '*.*',
+                    'node_modules/**/*',
+                    'bower_components/**/*'
+                ]
+            }
+        }),
+        new DuplicatesPlugin(),
+        new CircularDependencyPlugin(),
     ]
 };
