@@ -38,6 +38,7 @@
   "dependencies": {
     "bower": "^1.8.2",
     "core-js": "^3.2.1",
-    "es-cookie": "^1.2.0"
+    "es-cookie": "^1.2.0",
+    "jquery": "^3.4.1"
   }
 }

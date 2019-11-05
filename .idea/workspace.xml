@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d731142b-187f-4d6b-aeb9-6255f4b4ec76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/app/.gitkip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site/article/user.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/assets/css/app.bundle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/assets/scripts/app.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/site/assets/scripts/app.bundle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/bower.json" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/bower.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_builder/prod.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_builder/src/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/src/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/scripts/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/src/scripts/app/User.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/src/scripts/app_site.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/src/style/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/style/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/src/style/app/main-styles/typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/style/app/main-styles/typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,10 +37,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
-  </component>
   <component name="ProjectId" id="1RETbQXAEm4BgaNC2Otds3BMNSD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -67,15 +56,17 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/site/assets/img" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/site_builder/src/style/app" />
       <recent name="$PROJECT_DIR$/site_builder/src/scripts/app" />
       <recent name="$PROJECT_DIR$/site_builder" />
       <recent name="$PROJECT_DIR$/src/scripts/ReportExporter" />
       <recent name="$PROJECT_DIR$/src/js" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site/assets/scripts" />
+      <recent name="$PROJECT_DIR$/site/assets/css" />
+      <recent name="$PROJECT_DIR$/site/assets/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,7 +98,11 @@
       <workItem from="1565099164603" duration="162000" />
       <workItem from="1565099623342" duration="2952000" />
       <workItem from="1565103930468" duration="1997000" />
-      <workItem from="1569231330700" duration="849000" />
+      <workItem from="1569231330700" duration="2826000" />
+      <workItem from="1572618377752" duration="2393000" />
+      <workItem from="1572695125323" duration="92000" />
+      <workItem from="1572795179448" duration="187000" />
+      <workItem from="1572943666412" duration="2012000" />
     </task>
     <servers />
   </component>
@@ -119,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
