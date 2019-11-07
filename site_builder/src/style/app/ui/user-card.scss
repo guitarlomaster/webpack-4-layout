@@ -1,0 +1,14 @@
+.user-card {
+  display: flex;
+  align-items: center;
+  .user-card__left {
+    margin-right: 10px;
+    width: 100px;
+    img {
+      width: 100%;
+    }
+  }
+  .user-card__right {
+
+  }
+}

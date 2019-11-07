@@ -2,14 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d731142b-187f-4d6b-aeb9-6255f4b4ec76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/site/article/user.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-initial-requester/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-initial-requester/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-pages/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-pages/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-users/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-users/components/User/User.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/app-users/index.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/axios/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/components/Auxiliary/Auxiliary.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/actions/actionTypes.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/actions/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/actions/resources.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/actions/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/reducers/resources.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/reducers/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/sagas/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/sagas/resources.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/scripts/apps/store/sagas/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/src/style/app/ui/user-card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/site_builder/webpack-prod.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_builder/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/prod.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/site_builder/src/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/src/scripts/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/scripts/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site_builder/src/style/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/style/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_builder/src/style/app/ui/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/src/style/app/ui/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/site_builder/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/site_builder/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +65,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/site/assets/scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/site_builder/src/scripts/apps/app-users" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,16 +79,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site_builder/src/scripts/apps" />
       <recent name="$PROJECT_DIR$/site_builder/src/style/app" />
       <recent name="$PROJECT_DIR$/site_builder/src/scripts/app" />
       <recent name="$PROJECT_DIR$/site_builder" />
       <recent name="$PROJECT_DIR$/src/scripts/ReportExporter" />
-      <recent name="$PROJECT_DIR$/src/js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/site_builder/src/scripts/apps/app-users" />
+      <recent name="$PROJECT_DIR$/site_builder/src/scripts/apps/app-initial-requester" />
+      <recent name="$PROJECT_DIR$/site_builder/src/scripts/apps/store/reducers" />
       <recent name="$PROJECT_DIR$/site/assets/scripts" />
       <recent name="$PROJECT_DIR$/site/assets/css" />
-      <recent name="$PROJECT_DIR$/site/assets/img" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -102,7 +126,9 @@
       <workItem from="1572618377752" duration="2393000" />
       <workItem from="1572695125323" duration="92000" />
       <workItem from="1572795179448" duration="187000" />
-      <workItem from="1572943666412" duration="2012000" />
+      <workItem from="1572943666412" duration="2041000" />
+      <workItem from="1573033866187" duration="7507000" />
+      <workItem from="1573105283666" duration="6142000" />
     </task>
     <servers />
   </component>

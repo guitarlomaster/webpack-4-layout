@@ -2,4 +2,12 @@
 
 @import "app/app";
 
-
+.users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  .users__item {
+    width: 300px;
+  }
+}

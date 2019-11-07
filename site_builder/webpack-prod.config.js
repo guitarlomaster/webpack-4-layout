@@ -5,8 +5,7 @@ const { DuplicatesPlugin } = require('inspectpack/plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 module.exports = {
-    mode: 'development',
-    devtool: 'source-map',
+    mode: 'production',
     entry: {
         'app': './src/scripts/app.js'
         //'app_site': './src/scripts/app_site.js'
