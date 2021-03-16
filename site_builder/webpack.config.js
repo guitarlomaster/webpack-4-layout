@@ -56,12 +56,21 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
+                test: /\.(png|jpe?g|gif|svg)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]?dummy=[hash]',
                     publicPath: '../img',
                     outputPath: 'img'
+                },
+            },
+            {
+                test: /\.(woff|woff2)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]?dummy=[hash]',
+                    publicPath: '../fonts',
+                    outputPath: 'fonts'
                 },
             },
         ]
