@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {UnusedFilesWebpackPlugin} = require('unused-files-webpack-plugin');
 const { DuplicatesPlugin } = require('inspectpack/plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -33,7 +34,7 @@ module.exports = {
                         loader: 'css-loader',
                         options: {
                             sourceMap: true,
-                            url: false
+                            // url: true
                         }
                     },
                     {
@@ -44,17 +45,32 @@ module.exports = {
                         }
                     },
                     {
+                        loader: 'resolve-url-loader',
+                    },
+                    {
                         loader: 'sass-loader',
                         options: {
                             sourceMap: true
                         }
-                    }
+                    },
                 ]
-            }
-
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]?dummy=[hash]',
+                    publicPath: '../img',
+                    outputPath: 'img'
+                },
+            },
         ]
     },
     plugins: [
+        // new HtmlWebpackPlugin({
+        //     filename: 'test.html',
+        //     template: './src/index.html'
+        // }),
         new MiniCssExtractPlugin({
             filename: './css/[name].bundle.css'
         }),

@@ -1,0 +1,148 @@
+description = "Default layout"
+
+[Session]
+[PageloadWithStats]
+[SocialPageSharing socialSharing]
+[Menu topmenu]
+id = 1
+[AjaxHelper]
+[LocaleAjaxHelper]
+[Billing]
+[CBT]
+[CBTAjaxHelper]
+[AvaContest]
+==
+<?php
+use Site\Core\Models\Settings;
+use Xp\Site\Classes\ADsHelper;
+
+function onStart() {
+    ADsHelper::processRefData();
+
+    $this['project_id'] = env('PROJECT_ID', 10000);
+    $this['client_id'] = env('AUTH_CLIENT_ID');
+    $this['render_ts'] = gmdate('U');
+    $this['title_ending'] = Settings::get('title-ending');
+    $this['title'] = Settings::get('title');
+    $this['meta_title'] = Settings::get('title');
+    $this['meta_description'] = Settings::get('description');
+    $this['meta_keywords'] = Settings::get('keywords');
+    $this['meta_ya_wm'] = Settings::get('yandex_wm');
+    $this['header_code'] = Settings::get('header_code');
+    $this['footer_code'] = Settings::get('footer_code');
+    $this['portal_widget_theme'] = Settings::get('portal_widget_theme');
+    $this->page->meta_title = Settings::get('title');
+$this->page->meta_description = Settings::get('description');
+$this->page->meta_keywords = Settings::get('keywords');
+$this['app_env'] = app('env');
+$this['sentry_release'] = config('sentry.release');
+$this['sentry_DSN'] = config('sentry.dsn');
+$this['sentry_enabled'] = Settings::get('sentry_site');
+
+if (Session::has('status')) {
+$this['status'] = Session::get('status');
+$this['message'] = Session::get('message');
+}
+}
+?>
+==
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="author" content="101XP">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content="101XP">
+    <meta name="yandex-verification" content="{{ meta_ya_wm }}" />
+    {% partial 'socialSharing::head' %}
+
+    <title>{{ this.page.title|_ }}</title>
+
+    {% partial 'favicon' %}
+
+    <link href="{{ [
+        'assets/css/xpBilling.css',
+        'assets/css/l.default.bundle.css',
+        '@framework.extras'
+    ]|theme }}" rel="stylesheet">
+
+    {% styles %}
+
+    <script type="text/javascript" src="{{ 'assets/scripts/sentry.bundle.js'| theme }}"></script>
+    <script type="text/javascript" src="https://universal-client.101xp.com/xp_guid.js"></script>
+    {% if user %}
+    <script type="text/javascript" src="https://universal-client.101xp.com/xpmetrika.2.0.js"></script>
+    <script type="text/javascript">
+        var pixel = new XPPixelRender("{{ project_id }}", "{{ user.id }}");
+    </script>
+    {% endif %}
+
+    <script src="{{ [
+        'assets/scripts/common.libs.js',
+        'assets/scripts/default.libs.js',
+        '@framework',
+        '@framework.extras',
+        'assets/scripts/runtime.bundle.js',
+        'assets/scripts/vendor-chunk.bundle.js',
+        'assets/scripts/common-chunk.bundle.js',
+        'assets/scripts/l.default.bundle.js'
+    ]| theme }}"></script>
+
+    {% component 'PageloadWithStats' %}
+
+    {% scripts %}
+
+    <script type="text/javascript">
+        projectID = "{{ project_id }}";
+        clientID = "{{ client_id }}";
+        renderTS = "{{ render_ts }}";
+        {% if sentry_enabled %}
+        sentryRelease = "{{ sentry_release }}";
+        sentryDSN = "{{ sentry_DSN }}";
+        appEnv = "{{ app_env }}";
+        {% if user %}
+        userID = {{ user.id }};
+        {% else %}
+        userID = undefined;
+        {% endif %}
+        {% endif %}
+    </script>
+
+    {% partial 'metrics' position='head' %}
+
+    {{ header_code | raw }}
+
+    <script type="text/javascript" src="https://{{ auth_widget_domain }}/xp-widget-listener.js"></script>
+</head>
+<body class="page-{{ this.page.baseFileName |replace({'/': '_'}) }} {% if user.id %} user {% endif %} " data-uid="{{ user.id }}">
+{% partial 'metrics' position='body' %}
+
+<!-- AVA VARIABLES -->
+<input type="hidden" id="avaAllowed" value="{{ ava_allowed }}">
+<input type="hidden" id="avaAttempted" value="{{ ava_attempted }}">
+<input type="hidden" id="avaEmailVerified" value="{{ ava_contest_attempt.email_verified }}">
+<input type="hidden" id="avaGiftReceived" value="{{ ava_contest_attempt.gift_received }}">
+
+<input type="hidden" id="userAuthorized" name="userAuthorized" value="{% if user %}1{% else %}0{% endif %}" />
+<input type="hidden" id="userEmail" name="userEmail" value="{% if user %}{{ user.email }}{% endif %}" />
+
+<div class="main-header-wrapper">
+    <div id="blockAuthPanel">
+        {% partial 'block-auth-panel' %}
+    </div>
+    {% partial 'header' %}
+</div>
+{% page %}
+
+<!-- <div class="block__social-sharing">
+    <div class="block-content">
+        {% component 'socialSharing' use_images=true %}
+    </div>
+</div> -->
+{{ footer_code | raw }}
+
+{% component 'PageloadWithStats' %}
+</body>
+</html>
