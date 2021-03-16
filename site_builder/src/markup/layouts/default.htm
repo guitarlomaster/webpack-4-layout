@@ -62,11 +62,13 @@ $this['message'] = Session::get('message');
 
     {% partial 'favicon' %}
 
-    <link href="{{ [
-        'assets/css/xpBilling.css',
-        'assets/css/l.default.bundle.css',
-        '@framework.extras'
-    ]|theme }}" rel="stylesheet">
+    <% if (htmlWebpackPlugin.options.files && htmlWebpackPlugin.options.files.styles) { %>
+        <link href="{{ [
+            <% for (var index in htmlWebpackPlugin.options.files.styles) { %>
+                '<%= htmlWebpackPlugin.options.files.styles[index] %>',
+            <% } %>
+        ] | theme }}" rel="stylesheet" />
+    <% } %>
 
     {% styles %}
 
@@ -79,16 +81,13 @@ $this['message'] = Session::get('message');
     </script>
     {% endif %}
 
-    <script src="{{ [
-        'assets/scripts/common.libs.js',
-        'assets/scripts/default.libs.js',
-        '@framework',
-        '@framework.extras',
-        'assets/scripts/runtime.bundle.js',
-        'assets/scripts/vendor-chunk.bundle.js',
-        'assets/scripts/common-chunk.bundle.js',
-        'assets/scripts/l.default.bundle.js'
-    ]| theme }}"></script>
+    <% if (htmlWebpackPlugin.options.files && htmlWebpackPlugin.options.files.headJs) { %>
+        <script src="{{ [
+            <% for (var index in htmlWebpackPlugin.options.files.headJs) { %>
+                '<%= htmlWebpackPlugin.options.files.headJs[index] %>',
+            <% } %>
+        ] | theme }}"></script>
+    <% } %>
 
     {% component 'PageloadWithStats' %}
 
@@ -144,5 +143,16 @@ $this['message'] = Session::get('message');
 {{ footer_code | raw }}
 
 {% component 'PageloadWithStats' %}
+
+<img src="../../img/main_page/man.jpg" alt="">
+
+<% if (htmlWebpackPlugin.options.files && htmlWebpackPlugin.options.files.bodyJs) { %>
+    <script src="{{ [
+        <% for (var index in htmlWebpackPlugin.options.files.bodyJs) { %>
+            '<%= htmlWebpackPlugin.options.files.bodyJs[index] %>',
+        <% } %>
+    ] | theme }}"></script>
+<% } %>
+
 </body>
 </html>

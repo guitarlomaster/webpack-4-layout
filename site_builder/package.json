@@ -25,6 +25,7 @@
     "circular-dependency-plugin": "^5.0.2",
     "css-loader": "^3.1.0",
     "file-loader": "^4.3.0",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^4.5.2",
     "inspectpack": "^4.2.2",
     "mini-css-extract-plugin": "^0.8.0",

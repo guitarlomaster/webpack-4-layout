@@ -8,7 +8,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        'app': './src/scripts/app.js'
+        'app': './src/scripts/app.js',
+        'promo': './src/scripts/promo.js'
         //'app_site': './src/scripts/app_site.js'
     },
     output: {
@@ -18,6 +19,13 @@ module.exports = {
     },
     module: {
         rules: [
+            // {
+            //     test: /\.html$/i,
+            //     loader: 'html-loader',
+            //     options: {
+            //         sources: false,
+            //     },
+            // },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -32,10 +40,7 @@ module.exports = {
                     MiniCssExtractPlugin.loader,
                     {
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: true,
-                            // url: true
-                        }
+                        options: {sourceMap: true}
                     },
                     {
                         loader: 'postcss-loader',
@@ -44,14 +49,10 @@ module.exports = {
                             config: {path: './postcss.config.js'}
                         }
                     },
-                    {
-                        loader: 'resolve-url-loader',
-                    },
+                    'resolve-url-loader',
                     {
                         loader: 'sass-loader',
-                        options: {
-                            sourceMap: true
-                        }
+                        options: {sourceMap: true}
                     },
                 ]
             },
@@ -72,14 +73,33 @@ module.exports = {
                     publicPath: '../fonts',
                     outputPath: 'fonts'
                 },
-            },
+            }
         ]
     },
     plugins: [
-        // new HtmlWebpackPlugin({
-        //     filename: 'test.html',
-        //     template: './src/index.html'
-        // }),
+        new HtmlWebpackPlugin({
+            filename: '../layouts/test.htm',
+            template: './src/markup/layouts/default.htm',
+            inject: false,
+            files: {
+                headJs: [
+                    'assets/scripts/common.libs.js',
+                    'assets/scripts/default.libs.js',
+                    '@framework',
+                    '@framework.extras',
+                    'assets/scripts/runtime.bundle.js',
+                    'assets/scripts/vendor-chunk.bundle.js',
+                    'assets/scripts/common-chunk.bundle.js',
+                    'assets/scripts/app.bundle.css'
+                ],
+                bodyJs: null,
+                styles: [
+                    'assets/css/xpBilling.css',
+                    'assets/css/app.bundle.css',
+                    '@framework.extras'
+                ]
+            }
+        }),
         new MiniCssExtractPlugin({
             filename: './css/[name].bundle.css'
         }),
